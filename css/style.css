@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face
+{
+   font-family: Alpha;
+   src: url(Alphakind.ttf);
+}
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	width: 100%;
+	min-height: 100vh;
+	background: purple;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loader
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999999999;
+    background:#110617;
+    flex-direction:column;
+}
+.loader img
+{
+    max-width:320px;
+}
+.nguyenSection
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url('https://i.pinimg.com/originals/b7/ac/99/b7ac99965b68f4e232d0d473fff16fa8.jpg') no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.nguyenSection:before
+{
+   content:'';
+   position: absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background:rgba(0,0,0,0.50);
+ 
+}
+.nguyenSection .headerBg
+{
+	position: fixed;
+	top:0;
+	left:50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 80px;
+	line-height:40px;
+	font-family:'Alpha';
+	z-index: 99999999;
+}
+.headerBg h1
+{
+	font-family: 'Alpha';
+	color:#fff;
+	font-size: 25px;
+	z-index:2;
+	text-shadow:0 0.5px 10px #b501f5;
+}
+.nguyenSection .headerBg img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+.nguyenSection .ngWrap
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 40px 10px 0px 10px;
+	justify-content: center;
+	overflow:hidden;
+}
+
+.ngWrap .banner
+{
+   position: relative;
+   margin-top: 10px;
+   width: 100%;
+   height:50px;
+   background:url('../ngMedia/for_grand.png') no-repeat;
+   background-size:100% 100%;
+   display:flex;
+   align-items:center;
+   text-align:center;
+   justify-content:center;
+   padding:20px;
+   font-family: 'Alpha';
+   color:#fff;
+   font-size: 13px;
+   text-shadow:0 0.5px 10px #b501f5;
+   overflow:hidden;
+}
+
+.banner img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.ngWrap .dialog
+{
+	position: relative;
+	margin-top: 5px;
+	width: 100%;
+	height: 190px;
+	overflow:hidden;
+}
+.ngWrap .dialog .dialogBg
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:url('../ngMedia/dialog_bg.png') no-repeat;
+	background-size:100% 100%;
+	pointer-events: none;
+	overflow:hidden;
+}
+.dialog .dialogBg img
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:95%;
+    height:90%;
+    border-radius:3px;
+    z-index:999;
+}
+
+.ngWrap .menu
+{
+    position:relative;
+    width:100%;
+    height:40px;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+}
+.menu .tab
+{
+    position:relative;
+    width:120px;
+    height:50px;
+    line-height:40px;
+    display:flex;
+    justify-content:center;
+}
+.menu .tab .tabbed
+{
+   z-index:9999;
+   color:#fff;
+   font-family: 'Alpha';
+   -webkit-text-stroke: .1px orange;
+   text-shadow:0 .5px 1px #333;
+}
+.menu .tab:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../ngMedia/spin.png') no-repeat;
+    background-size:100% 100%;
+}
+
+.menu .tab.active:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../ngMedia/super_spin.png') no-repeat;
+    background-size:100% 100%;
+}
+
+
+
+
+.ngWrap .hadiah
+{
+    position: relative;
+    width:100%;
+    padding:10px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    overflow: hidden;
+}
+
+.hadiah .box
+{
+    position:relative;
+    width:110px;
+    height:145px;
+    margin:2px;
+}
+
+.box .prize
+{
+    position:relative;
+    width:100%;
+    height:150px;
+    z-index:2;
+}
+.box .prize img
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:80%;
+    height:80%;
+    z-index:999;
+}
+.box .prize:before
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../ngMedia/prize0.png');
+    background-size:100% 100%;
+    z-index:1;
+}
+
+.box .button
+{
+    position:relative;
+    width:100%;
+    height:35px;
+    display:flex;
+    justify-content:center;
+    padding-top:5px;
+}
+
+.box .button img
+{
+    position: absolute;
+    top:-5px;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:999;
+}
+
+.box .button .text
+{
+   z-index:9999;
+   color:#fff;
+   font-family: 'Alpha';
+   -webkit-text-stroke: .1px orange;
+   text-shadow:0 .5px 1px #333;
+}
+
+
+
+.ngWrap .formnya
+{
+   position: relative;
+   width:100%;
+   text-align:center;
+   justify-content:center;
+}
+.formnya h1
+{
+   position:relative;
+   margin-top:10px;
+   font-family: 'Alpha';
+   color:#fff;
+   font-size: 25px;
+   z-index:2;
+   text-shadow:0 0.5px 10px #b501f5;
+   text-align:center;
+}
+.formnya .form-group
+{
+   position:relative;
+   width:100%;
+   display:flex;
+   justify-content:center;
+   flex-direction:column;
+   text-align:center;
+}
+.form-group .form-input
+{
+   outline:none;
+   padding-left:13px;
+   padding-right:13px;
+   height:50px;
+   border:none;
+   background:url('../ngMedia/for_grand.png');
+   background-size:100% 100%;
+   color:#fff;
+   font-family:'Roboto Slab';
+}
+select 
+{
+   -moz-appearance:none;
+   -webkit-appearance:none;
+   appearance:none;
+}
+.form-group .form-button
+{
+   margin-top:10px;
+   outline:none;
+   padding-left:13px;
+   padding-right:13px;
+   height:40px;
+   border:none;
+   width:110px;
+   background:url('../ngMedia/banner.png');
+   background-size:100% 100%;
+   font-weight:bold;
+   color:#fff;
+   display:flex;
+   justify-content:center;
+   font-family:'Roboto Slab';
+   text-align:center;
+}
+.form-group .form-input::placeholder
+{
+   color:#fff;
+}
+.formnya .pesanForm
+{
+   position:absolute;
+   bottom:-30px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   color:#fff;
+   width:250px;
+   text-align:center;
+   font-size: 10px;
+   text-shadow:0 0.5px 10px red;
+   padding:2px 5px;
+   display:none;
+}
+
+
+
+
+
+.nguyenSection .bottomBg
+{
+	position: fixed;
+	bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background:url('../ngMedia/dialog.png') no-repeat;
+    background-position: 50% 50%;
+	width: 100%;
+	height: 70px;
+	padding: 10px 10px 25px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top:2px solid orange;
+	font-family:'Roboto';
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	font-size:15px;
+	z-index:999999;
+}
+.nguyenSection .bottomBg img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+.bottomBg .footerLogo
+{
+	position: relative;
+	max-width: 60px;
+	margin-right: 15px;
+	box-shadow: 0 0 1px #bc13fe;
+}
+.footerLogo img
+{
+	border-radius: 3px;
+}
+.bottomBg .footerTitle
+{
+	position: relative;
+	white-space: normal;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 17px;
+	color:#fff;
+	text-shadow: 0 0 1px #bc13fe;
+}
+
+
+.popDialog
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:350px;
+    height:200px;
+    z-index:99999999;
+    display:none;
+}
+.popDialog:before
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../ngMedia/dialog.png');
+    background-size:100% 100%;
+    z-index:1;
+}
+.popDialog .tutup
+{
+    position: absolute;
+    top:10px;
+    left:20px;
+    width:20px;
+    height:20px;
+    background:url('../ngMedia/close.png');
+    background-size:100% 100%;
+    z-index:999999999;
+}
+.popDialog .titleText
+{
+   position:absolute;
+   top:20px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   color:#fff;
+   font-size: 18px;
+   text-shadow:0 0.5px 10px #b501f5;
+   z-index:999999999;
+}
+
+
+.popDialog .pict
+{
+   position:absolute;
+   top:45px;
+   left:50%;
+   transform:translateX(-50%);
+   width:100px;
+   height:100px;
+   color:#fff;
+   z-index:999999999;
+}
+.popDialog p
+{
+   position:absolute;
+   top:150px;
+   left:50%;
+   width:100%;
+   padding:10px;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   text-align:center;
+   color:#fff;
+   font-size: 10px;
+   text-shadow:0 0.5px 10px #b501f5;
+   z-index:999999999;
+}
+
+
+.popDialog .box
+{
+    position:absolute;
+    top:50px;
+    left:50%;
+    transform:translateX(-50%);
+    width:110px;
+    z-index:999999999;
+}
+
+.box .prize
+{
+    position:relative;
+    width:100%;
+    height:100px;
+    z-index:2;
+}
+.box .prize img
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:80%;
+    height:80%;
+    z-index:999;
+}
+.box .prize:before
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../ngMedia/prize0.png');
+    background-size:100% 100%;
+    z-index:1;
+}
+
+.box .button
+{
+    position:relative;
+    width:100%;
+    height:35px;
+    display:flex;
+    justify-content:center;
+    padding-top:5px;
+}
+
+.box .button img
+{
+    position: absolute;
+    top:-5px;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:999;
+}
+
+.box .button .text
+{
+   z-index:9999;
+   color:#fff;
+   font-family: 'Alpha';
+   -webkit-text-stroke: .1px orange;
+   text-shadow:0 .5px 1px #333;
+}
+.mask
+{
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background:rgba(0,0,0,0.50);
+   display:block;
+   z-index:999999;
+}
+
+
+
+
+
+
+
+.checkId
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:350px;
+    height:200px;
+    z-index:99999999;
+}
+.checkId:before
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../ngMedia/dialog.png');
+    background-size:100% 100%;
+    z-index:1;
+}
+.checkId .tutup
+{
+    position: absolute;
+    top:10px;
+    left:20px;
+    width:20px;
+    height:20px;
+    background:url('../ngMedia/close.png');
+    background-size:100% 100%;
+    z-index:999999999;
+}
+.checkId .titleText
+{
+   position:absolute;
+   top:20px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   color:#fff;
+   font-size: 20px;
+   text-shadow:0 0.5px 10px #b501f5;
+   z-index:999999999;
+}
+.checkId .idInput
+{
+   position:absolute;
+   top:60px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   color:#fff;
+   background:none;
+   border:none;
+   width: 300px;
+   outline:none;
+   padding-left:13px;
+   height:50px;
+   background:url('../ngMedia/for_grand.png');
+   background-size:100% 100%;
+   z-index:999999999;
+}
+.checkId .idInput::placeholder
+{
+   color:#fff;
+}
+.checkId .idInput:focus
+{
+   outline:none;
+}
+.checkId .check
+{
+   position:absolute;
+   top:120px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   color:#fff;
+   background:none;
+   border:none;
+   width: 70px;
+   outline:none;
+   text-align:center;
+   height:40px;
+   background:url('../ngMedia/banner.png');
+   background-size:100% 100%;
+   z-index:999999999;
+}
+.checkId .alert
+{
+   position:absolute;
+   top:170px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Alpha';
+   color:#fff;
+   width:250px;
+   text-align:center;
+   font-size: 10px;
+   text-shadow:0 0.5px 10px #b501f5;
+   padding:2px 5px;
+   z-index:999999999;
+   display:none;
+}
+
+.toast
+{
+   position:fixed;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   height:30px;
+   text-align:center;
+   line-height:30px;
+   color:#fff;
+   font-family:'Roboto Slab';
+   background:url('../ngMedia/toast.png');
+   background-size:100% 100%;
+   z-index:999999999;
+   overflow:hidden;
+   word-wrap:normal;
+   display:none;
+   animation: masuk .5s forwards linear;
+}
+@keyframes masuk
+{
+   from
+   {
+      width:0;
+   }
+   to
+   {
+      width:400px;
+   }
+}
+.toast .vis
+{
+  opacity:0;
+  animation: fade .5s forwards linear;
+  animation-delay:.2s;
+}
+@keyframes fade
+{
+   from
+   {
+      opacity:0;
+   }
+   to
+   {
+      opacity:1;
+   }
+}
+/*background:url('../ngMedia/for_grand.png') no-repeat;*/
+   /*background-size:100% 100%;*/
+@media(min-width: 911px)
+{
+	.nguyenSection
+	{
+		width: 400px;
+	}
+	.nguyenSection .headerBg
+	{
+		width: 400px;
+	}
+	.nguyenSection .bottomBg
+	{
+		width: 400px;
+	}
+}
